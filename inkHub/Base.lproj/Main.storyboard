@@ -121,11 +121,42 @@
                     <connections>
                         <outlet property="emailField" destination="Mm7-Tu-4Zu" id="zTS-KQ-Kdd"/>
                         <outlet property="pwdField" destination="RlA-Dz-pmJ" id="nYi-bd-1xl"/>
+                        <segue destination="PIX-Wb-nmD" kind="show" identifier="goToFeed" animates="NO" id="qvA-hk-BP4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="fMi-f1-fKn">
+            <objects>
+                <viewController id="PIX-Wb-nmD" customClass="FeedVC" customModule="inkHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sqx-da-DyH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-yt-CAZ">
+                                <rect key="frame" x="157.5" y="318.5" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.1725256443" green="0.17256247999999999" blue="0.17252331970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="PIX-Wb-nmD" eventType="touchUpInside" id="Fux-mk-THb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fmg-yt-CAZ" firstAttribute="centerX" secondItem="sqx-da-DyH" secondAttribute="centerX" id="XvV-g9-gB6"/>
+                            <constraint firstItem="Fmg-yt-CAZ" firstAttribute="centerY" secondItem="sqx-da-DyH" secondAttribute="centerY" id="sQ7-mm-WuJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ycV-NJ-bBv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KN7-7M-3pI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="26.53673163418291"/>
         </scene>
     </scenes>
     <resources>
