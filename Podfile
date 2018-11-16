@@ -10,6 +10,7 @@ target 'inkHub' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'FBSDKLoginKit'
 
   target 'inkHubTests' do
     inherit! :search_paths
