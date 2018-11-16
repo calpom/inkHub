@@ -57,20 +57,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-X8-YHe" customClass="RoundBtn" customModule="inkHub" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="215.5" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.17584460973739624" green="0.26555192470550537" blue="0.47306180000305176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="3hq-PR-DmC"/>
-                                    <constraint firstAttribute="height" constant="150" id="utx-3N-amy"/>
-                                </constraints>
-                                <state key="normal" image="f"/>
-                                <connections>
-                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbK-0A-Itl"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-CR-Efh">
-                                <rect key="frame" x="30" y="405.5" width="315" height="108"/>
+                                <rect key="frame" x="30" y="215.5" width="315" height="108"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mm7-Tu-4Zu" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="22"/>
@@ -82,7 +70,7 @@
                                         <rect key="frame" x="0.0" y="37" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-7p-so0" customClass="FancyBtn" customModule="inkHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="74" width="315" height="34"/>
@@ -91,17 +79,32 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yh5-Is-kFv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-X8-YHe" customClass="RoundBtn" customModule="inkHub" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="363.5" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.17584460973739624" green="0.26555192470550537" blue="0.47306180000305176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3hq-PR-DmC"/>
+                                    <constraint firstAttribute="height" constant="150" id="utx-3N-amy"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbK-0A-Itl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="m1J-X8-YHe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2iG-Gk-coT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebl-Un-dYo" secondAttribute="trailing" id="HBa-qp-la7"/>
                             <constraint firstItem="9Qz-NX-WQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ng8-oQ-9CT"/>
-                            <constraint firstItem="m1J-X8-YHe" firstAttribute="top" secondItem="ebl-Un-dYo" secondAttribute="bottom" constant="40" id="OJL-GN-zDV"/>
                             <constraint firstItem="9Qz-NX-WQb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yex-Oz-BAe"/>
+                            <constraint firstItem="dWY-CR-Efh" firstAttribute="top" secondItem="ebl-Un-dYo" secondAttribute="bottom" constant="40" id="aG7-Ga-weM"/>
                             <constraint firstItem="dWY-CR-Efh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="d6J-02-0Bu"/>
                             <constraint firstItem="nis-zl-p9z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dbf-rL-rXV"/>
                             <constraint firstItem="dWY-CR-Efh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVX-EQ-SBu"/>
@@ -111,10 +114,14 @@
                             <constraint firstItem="9Qz-NX-WQb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qTE-7R-L9v"/>
                             <constraint firstItem="nis-zl-p9z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s92-Re-AmE"/>
                             <constraint firstItem="nis-zl-p9z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t5M-E9-dJC"/>
-                            <constraint firstItem="dWY-CR-Efh" firstAttribute="top" secondItem="m1J-X8-YHe" secondAttribute="bottom" constant="40" id="uqz-lG-miZ"/>
+                            <constraint firstItem="m1J-X8-YHe" firstAttribute="top" secondItem="dWY-CR-Efh" secondAttribute="bottom" constant="40" id="tUo-86-w9T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="Mm7-Tu-4Zu" id="zTS-KQ-Kdd"/>
+                        <outlet property="pwdField" destination="RlA-Dz-pmJ" id="nYi-bd-1xl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
