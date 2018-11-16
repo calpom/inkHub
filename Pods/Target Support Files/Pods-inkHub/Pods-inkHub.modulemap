@@ -1,0 +1,6 @@
+framework module Pods_inkHub {
+  umbrella header "Pods-inkHub-umbrella.h"
+
+  export *
+  module * { export * }
+}
