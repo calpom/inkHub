@@ -8,18 +8,27 @@
 
 import UIKit
 
-class NewPostVC: UIViewController {
+class NewPostVC: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // can we add placeholder text for textview?
+        textView.delegate = self
+        textView.text = "Content..."
+        textView.textColor = .lightGray
+        
 
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
+        
+        // can we change color of done button?
+        doneButton.tintColor = UIColor(red:0.94, green:0.42, blue:0.00, alpha:1.0)
         
         toolBar.setItems([doneButton], animated: false)
         
@@ -58,9 +67,30 @@ class NewPostVC: UIViewController {
         
     }
     
+    
+    // * * * * * WE WANT PLACEHOLDER TEXT * * * * *
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if (textView.text == "Content..." && textView.textColor == .lightGray)
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if (textView.text == "")
+        {
+            textView.text = "Content..."
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
+    
     @objc func doneClicked() {
         view.endEditing(true)
     }
+    // * * * * * * * * * * * * * * * * * * * * * * *
 
     @IBAction func cancelPressed(_ sender: UIButton) {
         // close keyboard then screen
