@@ -183,7 +183,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZm-6x-fAt">
                                 <rect key="frame" x="0.0" y="65" width="375" height="552"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -261,22 +261,23 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-5D-lNf">
-                                <rect key="frame" x="8" y="340" width="359" height="31"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <rect key="frame" x="0.0" y="340" width="375" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.86563570205479456" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-eB-6OD">
-                                <rect key="frame" x="0.0" y="379" width="375" height="3621"/>
+                                <rect key="frame" x="0.0" y="378" width="375" height="3622"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-fY-hlU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-fY-hlU">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="4000"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="e71-gb-ny4"/>
                                             <constraint firstAttribute="height" constant="4000" id="nbs-hE-2Ag"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87047838184931503" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -288,24 +289,25 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.74109476804733276" green="0.74122357368469238" blue="0.74108666181564331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ebO-a2-6sz" firstAttribute="bottom" secondItem="4jX-eB-6OD" secondAttribute="bottom" id="7Kb-sS-Rf0"/>
                             <constraint firstItem="W1c-XB-hi3" firstAttribute="top" secondItem="kh7-gj-kIF" secondAttribute="top" id="Dn2-Rq-Uhz"/>
                             <constraint firstItem="N5N-5D-lNf" firstAttribute="top" secondItem="W1c-XB-hi3" secondAttribute="bottom" constant="275" id="Fqf-2u-YJG"/>
                             <constraint firstItem="GRE-fY-hlU" firstAttribute="width" secondItem="kh7-gj-kIF" secondAttribute="width" id="Mn5-uu-hCb"/>
-                            <constraint firstItem="N5N-5D-lNf" firstAttribute="leading" secondItem="kh7-gj-kIF" secondAttribute="leading" constant="8" id="aVy-QW-xBe"/>
+                            <constraint firstItem="N5N-5D-lNf" firstAttribute="leading" secondItem="kh7-gj-kIF" secondAttribute="leading" id="aVy-QW-xBe"/>
                             <constraint firstItem="4jX-eB-6OD" firstAttribute="top" secondItem="N5N-5D-lNf" secondAttribute="bottom" constant="8" id="fYX-UD-36p"/>
                             <constraint firstItem="4jX-eB-6OD" firstAttribute="leading" secondItem="ebO-a2-6sz" secondAttribute="leading" id="g01-4R-QFl"/>
                             <constraint firstItem="W1c-XB-hi3" firstAttribute="leading" secondItem="ebO-a2-6sz" secondAttribute="leading" id="gF7-yM-asY"/>
                             <constraint firstItem="W1c-XB-hi3" firstAttribute="trailing" secondItem="ebO-a2-6sz" secondAttribute="trailing" id="hgy-mg-wGZ"/>
                             <constraint firstItem="4jX-eB-6OD" firstAttribute="trailing" secondItem="ebO-a2-6sz" secondAttribute="trailing" id="uvW-0p-uoa"/>
-                            <constraint firstAttribute="trailing" secondItem="N5N-5D-lNf" secondAttribute="trailing" constant="8" id="ypc-N8-fKX"/>
+                            <constraint firstAttribute="trailing" secondItem="N5N-5D-lNf" secondAttribute="trailing" id="ypc-N8-fKX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ebO-a2-6sz"/>
                     </view>
                     <size key="freeformSize" width="375" height="4000"/>
                     <connections>
+                        <outlet property="scrollView" destination="4jX-eB-6OD" id="2Kl-Xk-5HJ"/>
                         <outlet property="textView" destination="GRE-fY-hlU" id="SDe-oD-p19"/>
                         <outlet property="titleTextField" destination="N5N-5D-lNf" id="bv3-ZZ-roM"/>
                     </connections>

@@ -12,7 +12,8 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +22,9 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         textView.text = "Content..."
         textView.textColor = .lightGray
         
+        
+        // TESTING
+        self.textView.layoutManager.allowsNonContiguousLayout = false
 
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -39,6 +43,7 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         
         // listen for keyboard events
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name:UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name:UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name:UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
@@ -46,6 +51,7 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     deinit {
         // stop listening for keyboard hide/show events
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
@@ -56,19 +62,35 @@ class NewPostVC: UIViewController, UITextViewDelegate {
             return
         }
         
-        if notification.name == UIResponder.keyboardWillShowNotification ||
-            notification.name == UIResponder.keyboardWillChangeFrameNotification {
+        // This is the part where the textview should scroll
+        // to where the cursor is
+        if notification.name == UIResponder.keyboardDidShowNotification {
+            let mainViewY = self.view.frame.origin.y
+            let textViewY = self.textView.frame.origin.y
+            let oneLineHeight = self.textView.font?.lineHeight
+            let delta = (textViewY - mainViewY) - oneLineHeight!
+            let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+            let keyboardHeight = (keyboardSize?.height)!
+            self.textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight + delta, right: 0)
+            self.textView.scrollIndicatorInsets = textView.contentInset
             
+        } else if notification.name == UIResponder.keyboardWillShowNotification ||
+            notification.name == UIResponder.keyboardWillChangeFrameNotification {
             view.frame.origin.y = -keyboardRect.height
-        } else {
+            
+        } else if notification.name == UIResponder.keyboardWillHideNotification {
+            // if keyboard will hide
             view.frame.origin.y = 0
+            
+            self.textView.contentInset = UIEdgeInsets.zero
+            self.textView.scrollIndicatorInsets = UIEdgeInsets.zero
         }
         
         
     }
     
     
-    // * * * * * WE WANT PLACEHOLDER TEXT * * * * *
+    // * * * * * WE WANT PLACEHOLDER TEXT FOR TEXTVIEW * * * * *
     func textViewDidBeginEditing(_ textView: UITextView) {
         if (textView.text == "Content..." && textView.textColor == .lightGray)
         {
@@ -77,7 +99,14 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         }
         textView.becomeFirstResponder() //Optional
     }
-    
+    // TESTING
+    func textViewDidChange(_ leTextView: UITextView) {
+        // TESTING
+        print("Text View Did Change")
+        let bottom = NSMakeRange(textView.text.count - 1, 1)
+        textView.scrollRangeToVisible(bottom)
+
+    }
     func textViewDidEndEditing(_ textView: UITextView) {
         if (textView.text == "")
         {
@@ -86,11 +115,13 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         }
         textView.resignFirstResponder()
     }
+    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    
     
     @objc func doneClicked() {
         view.endEditing(true)
     }
-    // * * * * * * * * * * * * * * * * * * * * * * *
+    
 
     @IBAction func cancelPressed(_ sender: UIButton) {
         // close keyboard then screen
@@ -99,6 +130,7 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postPressed(_ sender: UIButton) {
+
         // TODO: ADD POST !!
         
         // if title and content are not empty,
@@ -108,6 +140,7 @@ class NewPostVC: UIViewController, UITextViewDelegate {
             self.view.endEditing(true)
             dismiss(animated: true, completion: nil)
         }
+        
         
     }
     
