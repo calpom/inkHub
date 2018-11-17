@@ -21,6 +21,8 @@
 		34B60103219E9DBE00BC3C31 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B60102219E9DBE00BC3C31 /* FancyField.swift */; };
 		34B60105219E9F0000BC3C31 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B60104219E9F0000BC3C31 /* FancyBtn.swift */; };
 		34B60108219F77AA00BC3C31 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B60107219F77AA00BC3C31 /* FeedVC.swift */; };
+		34B6010A219F951200BC3C31 /* FancyViewWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B60109219F951200BC3C31 /* FancyViewWithBorder.swift */; };
+		34E420C0219F9FE7002E3B92 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E420BF219F9FE7002E3B92 /* NewPostVC.swift */; };
 		37ED775AFB5795915E675D19 /* Pods_inkHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F66CCE34AC024ABD57E745 /* Pods_inkHub.framework */; };
 		737AF8EFCC818DB94C1A46CB /* Pods_inkHubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE23A699F8206BE8497608F0 /* Pods_inkHubUITests.framework */; };
 		E677511985BC2DAC581F1C4C /* Pods_inkHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12833D8CF7B30E3D6C92391 /* Pods_inkHubTests.framework */; };
@@ -65,6 +67,8 @@
 		34B60104219E9F0000BC3C31 /* FancyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		34B60106219F5E2E00BC3C31 /* inkHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = inkHub.entitlements; sourceTree = "<group>"; };
 		34B60107219F77AA00BC3C31 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		34B60109219F951200BC3C31 /* FancyViewWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyViewWithBorder.swift; sourceTree = "<group>"; };
+		34E420BF219F9FE7002E3B92 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 		68F66CCE34AC024ABD57E745 /* Pods_inkHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inkHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAFA176960EB8F4603BF476 /* Pods-inkHubUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inkHubUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-inkHubUITests/Pods-inkHubUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD03DF778614A673741A87B /* Pods-inkHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inkHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-inkHub/Pods-inkHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				34B60100219E9CA200BC3C31 /* RoundBtn.swift */,
 				34B60102219E9DBE00BC3C31 /* FancyField.swift */,
 				34B60104219E9F0000BC3C31 /* FancyBtn.swift */,
+				34B60109219F951200BC3C31 /* FancyViewWithBorder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			children = (
 				34B600CA219E51B500BC3C31 /* SignInVC.swift */,
 				34B60107219F77AA00BC3C31 /* FeedVC.swift */,
+				34E420BF219F9FE7002E3B92 /* NewPostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -473,6 +479,8 @@
 				34B60108219F77AA00BC3C31 /* FeedVC.swift in Sources */,
 				34B600FC219E9A3900BC3C31 /* FancyView.swift in Sources */,
 				34B600FF219E9AAE00BC3C31 /* Constants.swift in Sources */,
+				34E420C0219F9FE7002E3B92 /* NewPostVC.swift in Sources */,
+				34B6010A219F951200BC3C31 /* FancyViewWithBorder.swift in Sources */,
 				34B60105219E9F0000BC3C31 /* FancyBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
