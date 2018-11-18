@@ -12,6 +12,7 @@ target 'inkHub' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
+  pod 'IQKeyboardManagerSwift'
 
   target 'inkHubTests' do
     inherit! :search_paths

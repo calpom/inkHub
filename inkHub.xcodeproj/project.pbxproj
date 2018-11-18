@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A064A621A0DD1F00A722C8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A064A521A0DD1F00A722C8 /* CircleView.swift */; };
 		34B600C9219E51B500BC3C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B600C8219E51B500BC3C31 /* AppDelegate.swift */; };
 		34B600CB219E51B500BC3C31 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B600CA219E51B500BC3C31 /* SignInVC.swift */; };
 		34B600CE219E51B500BC3C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B600CC219E51B500BC3C31 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34A064A521A0DD1F00A722C8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		34B600C5219E51B500BC3C31 /* inkHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inkHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B600C8219E51B500BC3C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B600CA219E51B500BC3C31 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				34B60102219E9DBE00BC3C31 /* FancyField.swift */,
 				34B60104219E9F0000BC3C31 /* FancyBtn.swift */,
 				34B60109219F951200BC3C31 /* FancyViewWithBorder.swift */,
+				34A064A521A0DD1F00A722C8 /* CircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -434,6 +438,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -478,6 +483,7 @@
 				34B600C9219E51B500BC3C31 /* AppDelegate.swift in Sources */,
 				34B60108219F77AA00BC3C31 /* FeedVC.swift in Sources */,
 				34B600FC219E9A3900BC3C31 /* FancyView.swift in Sources */,
+				34A064A621A0DD1F00A722C8 /* CircleView.swift in Sources */,
 				34B600FF219E9AAE00BC3C31 /* Constants.swift in Sources */,
 				34E420C0219F9FE7002E3B92 /* NewPostVC.swift in Sources */,
 				34B6010A219F951200BC3C31 /* FancyViewWithBorder.swift in Sources */,

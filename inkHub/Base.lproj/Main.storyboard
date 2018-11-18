@@ -184,6 +184,102 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZm-6x-fAt">
                                 <rect key="frame" x="0.0" y="65" width="375" height="552"/>
                                 <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="459" id="VhF-ba-0on">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="459"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhF-ba-0on" id="YO6-XB-dc5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="458.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GW5-mx-8iu" customClass="FancyView" customModule="inkHub" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="345" height="437"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="uym-7v-vkn" customClass="CircleView" customModule="inkHub" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="60" height="60"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="Sf4-YF-OlS"/>
+                                                                <constraint firstAttribute="width" constant="60" id="xkT-uO-JnP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="cVS-eD-4Au">
+                                                            <rect key="frame" x="73" y="8" width="264" height="54"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUI-gE-hG2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87275256850000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by userName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-hr-Ife">
+                                                                    <rect key="frame" x="0.0" y="25.5" width="264" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="16"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="04-20-2069" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNP-Xr-gpU">
+                                                                    <rect key="frame" x="0.0" y="46" width="264" height="8"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="12"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.38" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1x-3N-Ylm">
+                                                            <rect key="frame" x="5" y="73" width="332" height="309"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="309" id="teH-YS-KlQ"/>
+                                                            </constraints>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.86691994863013699" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="Jyb-rc-ph3">
+                                                            <rect key="frame" x="293" y="390" width="47" height="47"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="47" id="CKu-Fd-KjQ"/>
+                                                                <constraint firstAttribute="height" constant="47" id="rej-XX-dQK"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42069" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpM-aP-2vL">
+                                                            <rect key="frame" x="205" y="404.5" width="80" height="18.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="BNv-ZD-mAs"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54425299657534243" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Jyb-rc-ph3" firstAttribute="leading" secondItem="cpM-aP-2vL" secondAttribute="trailing" constant="8" id="4Tl-Ar-3vd"/>
+                                                        <constraint firstItem="uym-7v-vkn" firstAttribute="top" secondItem="GW5-mx-8iu" secondAttribute="top" constant="5" id="78G-jf-L81"/>
+                                                        <constraint firstItem="x1x-3N-Ylm" firstAttribute="top" secondItem="uym-7v-vkn" secondAttribute="bottom" constant="8" id="8up-aZ-Rdr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Jyb-rc-ph3" secondAttribute="bottom" id="Dy8-Mc-I3N"/>
+                                                        <constraint firstItem="cVS-eD-4Au" firstAttribute="top" secondItem="GW5-mx-8iu" secondAttribute="top" constant="8" id="Hne-Vw-XR2"/>
+                                                        <constraint firstItem="cpM-aP-2vL" firstAttribute="centerY" secondItem="Jyb-rc-ph3" secondAttribute="centerY" id="Hvu-ip-nbH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Jyb-rc-ph3" secondAttribute="trailing" constant="5" id="Smd-aQ-abH"/>
+                                                        <constraint firstItem="cVS-eD-4Au" firstAttribute="centerY" secondItem="uym-7v-vkn" secondAttribute="centerY" id="UHE-co-n1i"/>
+                                                        <constraint firstItem="cVS-eD-4Au" firstAttribute="leading" secondItem="uym-7v-vkn" secondAttribute="trailing" constant="8" id="im2-bw-dla"/>
+                                                        <constraint firstItem="x1x-3N-Ylm" firstAttribute="leading" secondItem="GW5-mx-8iu" secondAttribute="leading" constant="5" id="mee-fK-71V"/>
+                                                        <constraint firstItem="uym-7v-vkn" firstAttribute="leading" secondItem="GW5-mx-8iu" secondAttribute="leading" constant="5" id="rJ7-Ed-6df"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cVS-eD-4Au" secondAttribute="trailing" constant="8" id="vr7-bf-ijx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="x1x-3N-Ylm" secondAttribute="trailing" constant="8" id="z9n-Nb-SQ6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GW5-mx-8iu" firstAttribute="top" secondItem="YO6-XB-dc5" secondAttribute="topMargin" id="E7M-Bk-YsH"/>
+                                                <constraint firstItem="GW5-mx-8iu" firstAttribute="leading" secondItem="YO6-XB-dc5" secondAttribute="leadingMargin" id="Hxv-3A-jP4"/>
+                                                <constraint firstItem="GW5-mx-8iu" firstAttribute="trailing" secondItem="YO6-XB-dc5" secondAttribute="trailingMargin" id="Odg-pG-sdL"/>
+                                                <constraint firstItem="GW5-mx-8iu" firstAttribute="bottom" secondItem="YO6-XB-dc5" secondAttribute="bottomMargin" id="WUw-VS-Cnl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -261,13 +357,13 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-5D-lNf">
-                                <rect key="frame" x="0.0" y="340" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="73" width="375" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.86563570205479456" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-eB-6OD">
-                                <rect key="frame" x="0.0" y="378" width="375" height="3622"/>
+                                <rect key="frame" x="0.0" y="111" width="375" height="3889"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-fY-hlU">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="4000"/>
@@ -293,7 +389,7 @@
                         <constraints>
                             <constraint firstItem="ebO-a2-6sz" firstAttribute="bottom" secondItem="4jX-eB-6OD" secondAttribute="bottom" id="7Kb-sS-Rf0"/>
                             <constraint firstItem="W1c-XB-hi3" firstAttribute="top" secondItem="kh7-gj-kIF" secondAttribute="top" id="Dn2-Rq-Uhz"/>
-                            <constraint firstItem="N5N-5D-lNf" firstAttribute="top" secondItem="W1c-XB-hi3" secondAttribute="bottom" constant="275" id="Fqf-2u-YJG"/>
+                            <constraint firstItem="N5N-5D-lNf" firstAttribute="top" secondItem="W1c-XB-hi3" secondAttribute="bottom" constant="8" id="Fqf-2u-YJG"/>
                             <constraint firstItem="GRE-fY-hlU" firstAttribute="width" secondItem="kh7-gj-kIF" secondAttribute="width" id="Mn5-uu-hCb"/>
                             <constraint firstItem="N5N-5D-lNf" firstAttribute="leading" secondItem="kh7-gj-kIF" secondAttribute="leading" id="aVy-QW-xBe"/>
                             <constraint firstItem="4jX-eB-6OD" firstAttribute="top" secondItem="N5N-5D-lNf" secondAttribute="bottom" constant="8" id="fYX-UD-36p"/>
@@ -314,13 +410,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Inn-rC-711" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="1526"/>
+            <point key="canvasLocation" x="772" y="2254"/>
         </scene>
     </scenes>
     <resources>
+        <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
         <image name="inkHubLogoBlack" width="159.75" height="52.5"/>
         <image name="inkHubLogoWhite" width="154.5" height="56.25"/>
         <image name="plusButton" width="285.7674560546875" height="285.7674560546875"/>
+        <image name="profile" width="113" height="155"/>
     </resources>
 </document>

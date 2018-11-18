@@ -21,10 +21,6 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         textView.delegate = self
         textView.text = "Content..."
         textView.textColor = .lightGray
-        
-        
-        // TESTING
-        self.textView.layoutManager.allowsNonContiguousLayout = false
 
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -57,14 +53,17 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     }
     
     @objc func keyboardWillChange(notification: Notification) {
-
+        
+        /*
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
+        */
         
         // This is the part where the textview should scroll
         // to where the cursor is
         if notification.name == UIResponder.keyboardDidShowNotification {
+            /*
             let mainViewY = self.view.frame.origin.y
             let textViewY = self.textView.frame.origin.y
             let oneLineHeight = self.textView.font?.lineHeight
@@ -73,17 +72,20 @@ class NewPostVC: UIViewController, UITextViewDelegate {
             let keyboardHeight = (keyboardSize?.height)!
             self.textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight + delta, right: 0)
             self.textView.scrollIndicatorInsets = textView.contentInset
+            */
             
         } else if notification.name == UIResponder.keyboardWillShowNotification ||
             notification.name == UIResponder.keyboardWillChangeFrameNotification {
-            view.frame.origin.y = -keyboardRect.height
+            //view.frame.origin.y = -keyboardRect.height
             
         } else if notification.name == UIResponder.keyboardWillHideNotification {
             // if keyboard will hide
-            view.frame.origin.y = 0
+            //view.frame.origin.y = 0
             
+            /*
             self.textView.contentInset = UIEdgeInsets.zero
             self.textView.scrollIndicatorInsets = UIEdgeInsets.zero
+            */
         }
         
         
@@ -103,8 +105,10 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ leTextView: UITextView) {
         // TESTING
         print("Text View Did Change")
+        /*
         let bottom = NSMakeRange(textView.text.count - 1, 1)
         textView.scrollRangeToVisible(bottom)
+        */
 
     }
     func textViewDidEndEditing(_ textView: UITextView) {
