@@ -214,7 +214,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C4Q-ac-ESW">
                                                                     <rect key="frame" x="0.0" y="0.0" width="332" height="60"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="uym-7v-vkn" customClass="CircleView" customModule="inkHub" customModuleProvider="target">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="uym-7v-vkn" customClass="CircleView" customModule="inkHub" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="Sf4-YF-OlS"/>
@@ -444,12 +444,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="default" width="447" height="439"/>
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
         <image name="inkHubLogoBlack" width="159.75" height="52.5"/>
         <image name="inkHubLogoWhite" width="154.5" height="56.25"/>
         <image name="plusButton" width="285.7674560546875" height="285.7674560546875"/>
         <image name="powerButton" width="100" height="100"/>
-        <image name="profile" width="113" height="155"/>
     </resources>
 </document>

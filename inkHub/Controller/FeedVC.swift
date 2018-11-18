@@ -32,6 +32,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         
         DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
+            
+            // clears out posts array each time its loaded
+            // so you dont have duplicated posts
+            self.posts = []
+            
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -50,6 +55,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    // reload data each time view appears
+    override func viewWillAppear(_ animated: Bool) {
+        print("CALEB: View will appear")
+        tableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -61,14 +72,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-
             if let img = FeedVC.imageCache.object(forKey: post.profilePicUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
 
         } else {
             return PostCell()

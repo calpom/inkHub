@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewPostVC: UIViewController, UITextViewDelegate {
     
@@ -134,16 +135,59 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postPressed(_ sender: UIButton) {
-
-        // TODO: ADD POST !!
-        
         // if title and content are not empty,
-        // then exit
+        // then add post and exit
         if titleTextField.text != "" && textView.text != "" {
+            // ADD POST
+            guard let title = titleTextField.text, title != "" else {
+                // TODO: NOTIFY USER TO ENTER A TITLE
+                print("CALEB: Must enter a title")
+                return
+            }
+            guard let content = textView.text, content != "" else {
+                // TODO: NOTIFY USER TO ENTER CONTENT
+                print("CALEB: Must enter content")
+                return
+            }
+            
+            /*
+            if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+                
+            }
+            */
+            
+            
+            // TODO: WORK ON THIS PROFILE PICTURE SHIT LATER!!!
+            /*
+            let user = Auth.auth().currentUser
+            let photoURL = user?.photoURL
+            */
+            
+            // at this point title and content are valid so post it
+            self.postToFirebase()
+            
             // close keyboard then screen
             self.view.endEditing(true)
             dismiss(animated: true, completion: nil)
         }
+        
+        // else do nothing
+        
+        
+    }
+    
+    
+    func postToFirebase() {
+        let post: Dictionary<String, AnyObject> = [
+            "title": titleTextField.text! as AnyObject,
+            "content": textView.text! as AnyObject,
+            "likes": 0 as AnyObject,
+            // TODO: FIX THIS PART LATER TO MAKE IT A GENERIC PROFILE PIC NOT SPECIFIC
+            "profilePicUrl": "gs://inkhub1.appspot.com/profile-pics/default.png" as AnyObject
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
         
         
     }

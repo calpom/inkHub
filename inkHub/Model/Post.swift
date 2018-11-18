@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class Post {
     
@@ -16,6 +17,7 @@ class Post {
     private var _likes: Int!
     private var _postKey: String!
     private var _profilePicUrl: String!
+    private var _postRef: DatabaseReference
     
     var title: String {
         return _title
@@ -42,6 +44,7 @@ class Post {
         self._content = content
         self._likes = likes
         self._profilePicUrl = profilePicUrl
+        _postRef = DataService.ds.REF_POSTS.child(_postKey)
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -61,5 +64,17 @@ class Post {
             self._profilePicUrl = profilePicUrl
         }
         
+        _postRef = DataService.ds.REF_POSTS.child(_postKey)
+        
+    }
+    
+    func adjustLikes(addLike: Bool) {
+        if addLike {
+            _likes = _likes + 1
+        } else {
+            _likes = _likes - 1
+        }
+        
+        _postRef.child("likes").setValue(_likes)
     }
 }
