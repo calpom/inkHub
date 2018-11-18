@@ -172,10 +172,10 @@
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm3-xh-uVP">
-                                        <rect key="frame" x="172.5" y="10" width="30" height="30"/>
+                                        <rect key="frame" x="175" y="12.5" width="25" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="W12-VK-IpA"/>
-                                            <constraint firstAttribute="height" constant="30" id="xkV-bn-EiB"/>
+                                            <constraint firstAttribute="width" constant="25" id="W12-VK-IpA"/>
+                                            <constraint firstAttribute="height" constant="25" id="xkV-bn-EiB"/>
                                         </constraints>
                                         <state key="normal" image="plusButton">
                                             <color key="titleColor" red="0.1725256443" green="0.17256247999999999" blue="0.17252331970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="65" width="375" height="552"/>
                                 <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="459" id="VhF-ba-0on">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="459" id="VhF-ba-0on" customClass="PostCell" customModule="inkHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="459"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VhF-ba-0on" id="YO6-XB-dc5">
@@ -252,7 +252,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="309" id="teH-YS-KlQ"/>
                                                                     </constraints>
-                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Hello my name is Caleb I am wondering where I came from. Where is my home and why I am seeing in first person. Are you seeing in first person?</mutableString>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.86691994863013699" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -297,6 +297,15 @@
                                                 <constraint firstItem="GW5-mx-8iu" firstAttribute="bottom" secondItem="YO6-XB-dc5" secondAttribute="bottomMargin" id="WUw-VS-Cnl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="x1x-3N-Ylm" id="XO2-yr-HgN"/>
+                                            <outlet property="dateLbl" destination="xNP-Xr-gpU" id="Q15-zJ-c0K"/>
+                                            <outlet property="likeButton" destination="Jyb-rc-ph3" id="1yX-fn-Ji1"/>
+                                            <outlet property="likesLbl" destination="cpM-aP-2vL" id="4Ky-nh-Tya"/>
+                                            <outlet property="profileImg" destination="uym-7v-vkn" id="lbG-cw-NmM"/>
+                                            <outlet property="titleLbl" destination="TUI-gE-hG2" id="mLx-5y-0dY"/>
+                                            <outlet property="usernameLbl" destination="PR7-hr-Ife" id="gMG-Mm-OmX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -319,6 +328,7 @@
                     <connections>
                         <outlet property="plusButton" destination="Mm3-xh-uVP" id="SVJ-NU-qDJ"/>
                         <outlet property="signOutButton" destination="ra4-mM-WX9" id="EQ4-1p-S2I"/>
+                        <outlet property="tableView" destination="XZm-6x-fAt" id="DW9-ju-plZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN7-7M-3pI" userLabel="First Responder" sceneMemberID="firstResponder"/>
