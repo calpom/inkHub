@@ -159,8 +159,8 @@
 		34B600C7219E51B500BC3C31 /* inkHub */ = {
 			isa = PBXGroup;
 			children = (
-				34A064A921A1D4A800A722C8 /* Services */,
 				34B60106219F5E2E00BC3C31 /* inkHub.entitlements */,
+				34A064A921A1D4A800A722C8 /* Services */,
 				34B600FD219E9A9300BC3C31 /* Util */,
 				34B600F8219E56F300BC3C31 /* Model */,
 				34B600FA219E56FD00BC3C31 /* Controller */,

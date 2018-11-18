@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Post {
     
@@ -14,6 +15,7 @@ class Post {
     private var _content: String!
     private var _likes: Int!
     private var _postKey: String!
+    private var _profilePicUrl: String!
     
     var title: String {
         return _title
@@ -31,10 +33,15 @@ class Post {
         return _postKey
     }
     
-    init(title: String, content: String, likes: Int) {
+    var profilePicUrl: String {
+        return _profilePicUrl
+    }
+    
+    init(title: String, content: String, likes: Int, profilePicUrl: String) {
         self._title = title
         self._content = content
         self._likes = likes
+        self._profilePicUrl = profilePicUrl
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -50,5 +57,9 @@ class Post {
         if let likes = postData["likes"] as? Int{
             self._likes = likes
         }
+        if let profilePicUrl = postData["profilePicUrl"] as? String {
+            self._profilePicUrl = profilePicUrl
+        }
+        
     }
 }

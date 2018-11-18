@@ -10,15 +10,23 @@ import Foundation
 import Firebase
 
 let DB_BASE = Database.database().reference()
+let STORAGE_BASE = Storage.storage().reference()
 
 class DataService {
     
     // this line alone makes this a singleton class
     static let ds = DataService()
     
+    
+    // DB References
     private var _REF_BASE = DB_BASE
     private var _REF_POSTS = DB_BASE.child("posts")
     private var _REF_USERS = DB_BASE.child("users")
+    
+    
+    // Storage References
+    private var _REF_PROFILE_PICS = STORAGE_BASE.child("profile-pics")
+    
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -30,6 +38,10 @@ class DataService {
     
     var REF_USERS: DatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_PROFILE_PICS: StorageReference {
+        return _REF_PROFILE_PICS
     }
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {

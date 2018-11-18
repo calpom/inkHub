@@ -17,6 +17,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     
     override func viewDidLoad() {
@@ -60,8 +61,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            cell.configureCell(post: post)
-            return cell
+
+            if let img = FeedVC.imageCache.object(forKey: post.profilePicUrl as NSString) {
+                cell.configureCell(post: post, img: img)
+                return cell
+            } else {
+                cell.configureCell(post: post)
+                return cell
+            }
+
         } else {
             return PostCell()
         }
