@@ -70,7 +70,23 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // reload data each time view appears
     override func viewWillAppear(_ animated: Bool) {
-        print("CALEB: View will appear")
+        DataService.ds.REF_POSTS.queryOrdered(byChild: "postedDate").observe(.value) { (snapshot) in
+            
+            // clears out posts array each time its loaded
+            // so you dont have duplicated posts
+            self.posts = []
+            
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    print("SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.insert(post, at: 0)
+                    }
+                }
+            }
+        }
         tableView.reloadData()
     }
     
