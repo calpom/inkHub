@@ -35,7 +35,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
+        DataService.ds.REF_POSTS.queryOrdered(byChild: "postedDate").observe(.value) { (snapshot) in
             
             // clears out posts array each time its loaded
             // so you dont have duplicated posts
@@ -47,7 +47,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
-                        self.posts.append(post)
+                        self.posts.insert(post, at: 0)
                     }
                 }
             }

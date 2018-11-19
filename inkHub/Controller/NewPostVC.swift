@@ -179,7 +179,8 @@ class NewPostVC: UIViewController, UITextViewDelegate {
             "content": textView.text! as AnyObject,
             "likes": 0 as AnyObject,
             // TODO: FIX THIS PART LATER TO MAKE IT A GENERIC PROFILE PIC NOT SPECIFIC
-            "profilePicUrl": "gs://inkhub1.appspot.com/profile-pics/default.png" as AnyObject
+            "profilePicUrl": "gs://inkhub1.appspot.com/profile-pics/default.png" as AnyObject,
+            "postedDate": ServerValue.timestamp() as AnyObject
         ]
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
