@@ -106,10 +106,6 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ leTextView: UITextView) {
         // TESTING
         print("Text View Did Change")
-        /*
-        let bottom = NSMakeRange(textView.text.count - 1, 1)
-        textView.scrollRangeToVisible(bottom)
-        */
 
     }
     func textViewDidEndEditing(_ textView: UITextView) {

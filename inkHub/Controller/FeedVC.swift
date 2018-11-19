@@ -23,12 +23,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TESTING:
+        // this prevents tableview from being jumpy when like button is pressed
         tableView.estimatedRowHeight = 450
- 
-        
-        // * * * * * * * *
-        
         
         // lower opacity of buttons
         plusButton.alpha = 0.8
@@ -90,23 +86,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return PostCell()
         }
     }
-    
-    // * * * * * TESTING * * * * *
-    /*
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
-    }
-     */
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-     */
-    
-    // * * * * * * * * * * * * * *
     
     @IBAction func signOutButtonTapped(_ sender: UIButton) {
         // first remove data from keychain then dismiss VC
