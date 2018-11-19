@@ -59,6 +59,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // scroll to the top ?
+        tableView.setContentOffset(.zero, animated: false)
+        
+
+        
+    }
+    
     // reload data each time view appears
     override func viewWillAppear(_ animated: Bool) {
         print("CALEB: View will appear")

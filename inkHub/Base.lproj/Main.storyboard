@@ -196,7 +196,8 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XZm-6x-fAt">
                                 <rect key="frame" x="0.0" y="65" width="375" height="552"/>
-                                <color key="backgroundColor" red="0.25879135727882385" green="0.2588421106338501" blue="0.25878816843032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="459" id="VhF-ba-0on" customClass="PostCell" customModule="inkHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="459"/>
@@ -230,7 +231,7 @@
                                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87275256850000005" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-hr-Ife">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack Kennedy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PR7-hr-Ife">
                                                                                     <rect key="frame" x="0.0" y="25.5" width="264" height="18.5"/>
                                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="16"/>
                                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
@@ -297,6 +298,7 @@
                                                 <constraint firstItem="GW5-mx-8iu" firstAttribute="bottom" secondItem="YO6-XB-dc5" secondAttribute="bottomMargin" id="WUw-VS-Cnl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="content" destination="x1x-3N-Ylm" id="XO2-yr-HgN"/>
                                             <outlet property="dateLbl" destination="xNP-Xr-gpU" id="Q15-zJ-c0K"/>
