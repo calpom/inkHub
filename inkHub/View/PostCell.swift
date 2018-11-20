@@ -39,6 +39,15 @@ class PostCell: UITableViewCell {
         self.content.text = post.content
         self.likesLbl.text = "\(post.likes)"
         
+        // set the formatted date as well
+        
+        let milisecond = post.postedDate
+        let dateVar = Date.init(timeIntervalSince1970: TimeInterval(milisecond)/1000)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
+        print(dateFormatter.string(from: dateVar))
+        self.dateLbl.text = dateFormatter.string(from: dateVar)
+        
         
         if img != nil {
             self.profileImg.image = img

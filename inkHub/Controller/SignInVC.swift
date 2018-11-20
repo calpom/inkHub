@@ -77,7 +77,7 @@ class SignInVC: UIViewController {
         
         // TODO: make warning label disappear
         
-        if let email = emailField.text, let pwd = pwdField.text {
+        if let email = self.emailField.text, let pwd = self.pwdField.text {
 
             if pwd.count < 6 {
                 // TODO: make warning label appear and make it say

@@ -19,9 +19,9 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         // can we add placeholder text for textview?
-        textView.delegate = self
-        textView.text = "Content..."
-        textView.textColor = .lightGray
+        self.textView.delegate = self
+        self.textView.text = "Content..."
+        self.textView.textColor = .lightGray
 
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -33,9 +33,9 @@ class NewPostVC: UIViewController, UITextViewDelegate {
         
         toolBar.setItems([doneButton], animated: false)
         
-        titleTextField.inputAccessoryView = toolBar
+        self.titleTextField.inputAccessoryView = toolBar
         
-        textView.inputAccessoryView = toolBar
+        self.textView.inputAccessoryView = toolBar
         
         
         // listen for keyboard events
@@ -127,20 +127,20 @@ class NewPostVC: UIViewController, UITextViewDelegate {
     @IBAction func cancelPressed(_ sender: UIButton) {
         // close keyboard then screen
         self.view.endEditing(true)
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func postPressed(_ sender: UIButton) {
         // if title and content are not empty,
         // then add post and exit
-        if titleTextField.text != "" && textView.text != "" {
+        if self.titleTextField.text != "" && self.textView.text != "" {
             // ADD POST
-            guard let title = titleTextField.text, title != "" else {
+            guard let title = self.titleTextField.text, title != "" else {
                 // TODO: NOTIFY USER TO ENTER A TITLE
                 print("CALEB: Must enter a title")
                 return
             }
-            guard let content = textView.text, content != "" else {
+            guard let content = self.textView.text, content != "" else {
                 // TODO: NOTIFY USER TO ENTER CONTENT
                 print("CALEB: Must enter content")
                 return
@@ -164,7 +164,7 @@ class NewPostVC: UIViewController, UITextViewDelegate {
             
             // close keyboard then screen
             self.view.endEditing(true)
-            dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
         
         // else do nothing

@@ -18,7 +18,7 @@ class Post {
     private var _postKey: String!
     private var _profilePicUrl: String!
     private var _postRef: DatabaseReference
-    private var _postedDate: String!
+    private var _postedDate: Int!
     
     var title: String {
         return _title
@@ -40,17 +40,17 @@ class Post {
         return _profilePicUrl
     }
     
-    var postedDate: String {
+    var postedDate: Int {
         return _postedDate
     }
     
-    init(title: String, content: String, likes: Int, profilePicUrl: String, postedDate: String) {
+    init(title: String, content: String, likes: Int, profilePicUrl: String, postedDate: Int) {
         self._title = title
         self._content = content
         self._likes = likes
         self._profilePicUrl = profilePicUrl
         self._postedDate = postedDate
-        _postRef = DataService.ds.REF_POSTS.child(_postKey)
+        self._postRef = DataService.ds.REF_POSTS.child(self._postKey)
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -69,20 +69,25 @@ class Post {
         if let profilePicUrl = postData["profilePicUrl"] as? String {
             self._profilePicUrl = profilePicUrl
         }
-        if let postedDate = postData["postedDate"] as? String {
+        if let postedDate = postData["postedDate"] as? Int {
             self._postedDate = postedDate
+
         }
-        _postRef = DataService.ds.REF_POSTS.child(_postKey)
         
+        self._postRef = DataService.ds.REF_POSTS.child(self._postKey)
+
     }
+    
+    
+    // maybe we need a getter? Cause this shit not working
     
     func adjustLikes(addLike: Bool) {
         if addLike {
-            _likes = _likes + 1
+            self._likes = self._likes + 1
         } else {
-            _likes = _likes - 1
+            self._likes = self._likes - 1
         }
         
-        _postRef.child("likes").setValue(_likes)
+        _postRef.child("likes").setValue(self._likes)
     }
 }

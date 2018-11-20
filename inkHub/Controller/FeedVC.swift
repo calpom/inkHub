@@ -27,13 +27,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.estimatedRowHeight = 450
         
         // lower opacity of buttons
-        plusButton.alpha = 0.8
-        plusButton.adjustsImageWhenHighlighted = true
-        signOutButton.alpha = 0.8
-        signOutButton.adjustsImageWhenHighlighted = true
+        self.plusButton.alpha = 0.8
+        self.plusButton.adjustsImageWhenHighlighted = true
+        self.signOutButton.alpha = 0.8
+        self.signOutButton.adjustsImageWhenHighlighted = true
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         DataService.ds.REF_POSTS.queryOrdered(byChild: "postedDate").observe(.value) { (snapshot) in
             
@@ -62,7 +62,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         // scroll to the top ?
-        tableView.setContentOffset(.zero, animated: false)
+        self.tableView.setContentOffset(.zero, animated: false)
         
 
         
@@ -87,7 +87,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -117,7 +117,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("CALEB: ID removed from keychain \(keychainResult)")
         try! Auth.auth().signOut()
-        dismiss(animated: false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     
