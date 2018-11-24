@@ -16,14 +16,19 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var pwdField: FancyField!
-
+    @IBOutlet weak var warningLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // NOTE: viewDidLoad() cannot perform segues. instead use viewDidAppear
+        warningLabel.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // if user signed in already, utilize dat segue
+        warningLabel.isHidden = true
+        emailField.text = ""
+        pwdField.text = ""
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             print("CALEB: ID found in keychain")
             performSegue(withIdentifier: "goToFeed", sender: nil)
@@ -83,6 +88,8 @@ class SignInVC: UIViewController {
                 // TODO: make warning label appear and make it say
                 // "password must be at least 6 characters long"
                 print("CALEB: Password is too short")
+                warningLabel.text = "Password must be at least 6 characters long"
+                warningLabel.isHidden = false
                 return
             }
             
