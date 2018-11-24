@@ -60,22 +60,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-CR-Efh">
-                                <rect key="frame" x="30" y="215.5" width="315" height="141"/>
+                                <rect key="frame" x="30" y="205.5" width="315" height="141"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warningLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EY3-eW-LMd">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mm7-Tu-4Zu" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="22"/>
+                                        <rect key="frame" x="0.0" y="33" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RlA-Dz-pmJ" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="37" width="315" height="22"/>
+                                        <rect key="frame" x="0.0" y="70" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-7p-so0" customClass="FancyBtn" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74" width="315" height="34"/>
+                                        <rect key="frame" x="0.0" y="107" width="315" height="34"/>
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.42352941176470588" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Sign In">
@@ -85,16 +91,10 @@
                                             <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yh5-Is-kFv"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warningLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EY3-eW-LMd">
-                                        <rect key="frame" x="0.0" y="123" width="315" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-X8-YHe" customClass="RoundBtn" customModule="inkHub" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="396.5" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="386.5" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.17584460973739624" green="0.26555192470550537" blue="0.47306180000305176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="3hq-PR-DmC"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebl-Un-dYo" secondAttribute="trailing" id="HBa-qp-la7"/>
                             <constraint firstItem="9Qz-NX-WQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ng8-oQ-9CT"/>
                             <constraint firstItem="9Qz-NX-WQb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yex-Oz-BAe"/>
-                            <constraint firstItem="dWY-CR-Efh" firstAttribute="top" secondItem="ebl-Un-dYo" secondAttribute="bottom" constant="40" id="aG7-Ga-weM"/>
+                            <constraint firstItem="dWY-CR-Efh" firstAttribute="top" secondItem="ebl-Un-dYo" secondAttribute="bottom" constant="30" id="aG7-Ga-weM"/>
                             <constraint firstItem="dWY-CR-Efh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="d6J-02-0Bu"/>
                             <constraint firstItem="nis-zl-p9z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dbf-rL-rXV"/>
                             <constraint firstItem="dWY-CR-Efh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVX-EQ-SBu"/>
@@ -497,34 +497,40 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-4S-GHA">
-                                <rect key="frame" x="30" y="285" width="315" height="215"/>
+                                <rect key="frame" x="30" y="268" width="315" height="215"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warningLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuP-sc-rSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmV-hB-qLs" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="22"/>
+                                        <rect key="frame" x="0.0" y="33" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRa-IC-ssr" userLabel="Username" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="37" width="315" height="22"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRa-IC-ssr" userLabel="Username" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="837-Jc-3HU" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74" width="315" height="22"/>
+                                        <rect key="frame" x="0.0" y="107" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-5v-ozd" customClass="FancyField" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="111" width="315" height="22"/>
+                                        <rect key="frame" x="0.0" y="144" width="315" height="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i42-Na-9Rr" customClass="FancyBtn" customModule="inkHub" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="148" width="315" height="34"/>
+                                        <rect key="frame" x="0.0" y="181" width="315" height="34"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Sign Up">
@@ -534,36 +540,29 @@
                                             <action selector="signUpButtonTapped:" destination="v7Q-Cx-0Sq" eventType="touchUpInside" id="UU1-Ji-5tH"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warningLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuP-sc-rSN">
-                                        <rect key="frame" x="0.0" y="197" width="315" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.93725490199999995" green="0.42352941179999998" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-FZ-Ws0" customClass="RoundBtn" customModule="inkHub" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="160" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePicture" translatesAutoresizingMaskIntoConstraints="NO" id="ADJ-P7-Yhl" customClass="CircleView" customModule="inkHub" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="143" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="KzC-Td-6cf"/>
-                                    <constraint firstAttribute="height" constant="100" id="hZi-MZ-cw0"/>
+                                    <constraint firstAttribute="height" constant="100" id="202-Am-lKH"/>
+                                    <constraint firstAttribute="width" constant="100" id="Qmn-nq-zF4"/>
                                 </constraints>
-                                <state key="normal" image="defaultProfilePicture"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wek-4S-GHA" firstAttribute="top" secondItem="tV2-FZ-Ws0" secondAttribute="bottom" constant="25" id="03c-cc-5br"/>
                             <constraint firstItem="jxt-dc-r7E" firstAttribute="trailing" secondItem="Wek-4S-GHA" secondAttribute="trailing" constant="30" id="2z5-kf-jdY"/>
                             <constraint firstItem="jfE-su-rKr" firstAttribute="leading" secondItem="jxt-dc-r7E" secondAttribute="leading" id="E2e-ZP-GZQ"/>
-                            <constraint firstItem="tV2-FZ-Ws0" firstAttribute="centerX" secondItem="V2U-Ld-Wpn" secondAttribute="centerX" id="KhN-Q9-P05"/>
+                            <constraint firstItem="Wek-4S-GHA" firstAttribute="top" secondItem="ADJ-P7-Yhl" secondAttribute="bottom" constant="25" id="Oo7-9l-ddB"/>
+                            <constraint firstItem="ADJ-P7-Yhl" firstAttribute="top" secondItem="HX3-gb-Hmf" secondAttribute="bottom" constant="8" id="Xcz-pk-sdY"/>
                             <constraint firstItem="Wek-4S-GHA" firstAttribute="centerX" secondItem="V2U-Ld-Wpn" secondAttribute="centerX" id="Zf6-IW-9MH"/>
                             <constraint firstItem="HX3-gb-Hmf" firstAttribute="leading" secondItem="jxt-dc-r7E" secondAttribute="leading" id="b4O-bf-92d"/>
                             <constraint firstItem="jfE-su-rKr" firstAttribute="bottom" secondItem="jxt-dc-r7E" secondAttribute="bottom" id="bZ0-uq-Fae"/>
                             <constraint firstItem="jfE-su-rKr" firstAttribute="trailing" secondItem="jxt-dc-r7E" secondAttribute="trailing" id="bqp-5v-seN"/>
+                            <constraint firstItem="ADJ-P7-Yhl" firstAttribute="centerX" secondItem="V2U-Ld-Wpn" secondAttribute="centerX" id="doL-zx-HzW"/>
                             <constraint firstItem="HX3-gb-Hmf" firstAttribute="trailing" secondItem="jxt-dc-r7E" secondAttribute="trailing" id="tdu-0f-aJ2"/>
                             <constraint firstItem="HX3-gb-Hmf" firstAttribute="top" secondItem="V2U-Ld-Wpn" secondAttribute="top" id="u4X-Th-Jon"/>
-                            <constraint firstItem="tV2-FZ-Ws0" firstAttribute="top" secondItem="HX3-gb-Hmf" secondAttribute="bottom" constant="25" id="udT-PE-9Q2"/>
                             <constraint firstItem="Wek-4S-GHA" firstAttribute="leading" secondItem="jxt-dc-r7E" secondAttribute="leading" constant="30" id="yCw-G0-ZW2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jxt-dc-r7E"/>
@@ -572,13 +571,15 @@
                         <outlet property="emailAdressField" destination="lmV-hB-qLs" id="Ynj-yo-fw1"/>
                         <outlet property="passwordField" destination="837-Jc-3HU" id="8nO-sd-yMW"/>
                         <outlet property="passwordField2" destination="gpe-5v-ozd" id="BNb-66-8AP"/>
+                        <outlet property="profileImage" destination="ADJ-P7-Yhl" id="oB0-2B-WQG"/>
                         <outlet property="usernameField" destination="SRa-IC-ssr" id="zOV-t4-xSy"/>
                         <outlet property="warningLabel" destination="HuP-sc-rSN" id="q2h-LL-vEL"/>
+                        <segue destination="PIX-Wb-nmD" kind="show" identifier="goToFeed" id="cNT-Wc-KtC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dL-Gd-tPY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="-746"/>
+            <point key="canvasLocation" x="-113" y="-746"/>
         </scene>
     </scenes>
     <resources>
@@ -590,4 +591,7 @@
         <image name="plusButton" width="285.7674560546875" height="285.7674560546875"/>
         <image name="powerButton" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cNT-Wc-KtC"/>
+    </inferredMetricsTieBreakers>
 </document>
